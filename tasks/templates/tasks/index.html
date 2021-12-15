@@ -1,0 +1,18 @@
+{% extends "tasks/layout.html" %}
+
+{% block body %}
+<div class="form" style="padding-left: 40%;padding-top: 5%;">
+      <h1>Lista de Actividades</h1>
+      <ul>
+            {% for task in tasks %}
+            <li>{{ task }}</li>
+            {% empty %}
+            <li>No hay actividades.</li>
+            {% endfor %}
+      </ul>
+      <div>
+
+      </div>
+      <a href="{% url 'tasks:add' %}">Añadir una nueva tarea.</a>
+      {% endblock %}
+</div>

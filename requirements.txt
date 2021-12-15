@@ -1,0 +1,5 @@
+django == 3.2.9.
+django-admin-interface
+django-crispy-forms
+social-auth-app-django
+django-rest-framework

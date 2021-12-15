@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+      <title>To-Do | Educaplus</title>
+      <link rel="stylesheet" href="{% static '/educaplus/styles.css' %}">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link rel="shortcut icon" href="{% static 'educaplus/favicon.ico' %}" type="image/x-icon">
+</head>
+
+<body>
+      <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+      <div class="wrapper">
+            <div class="sidebar">
+                  <h2>Educaplus</h2>
+                  <ul>
+                        <li><a href="{% url 'educaplus:index' %}"><i class="fas fa-home"></i>Home</a></li>
+                        <li><a href="https://calendar.google.com"><i class="fas fa-user"></i>Calendario</a></li>
+                        <li><a href="https://classroom.google.com/u/0/h"><i class="fas fa-address-card"></i>Tareas</a>
+                        </li>
+                        <li><a href="https://gmail.com"><i class="fas fa-project-diagram"></i>Correo</a></li>
+                        <li><a href="http://127.0.0.1:8000/tasks"><i class="fas fa-blog"></i>To Do List</a></li>
+                        <li><a href="http://127.0.0.1:8000/accounts/logout"><i class="fas fa-address-book"></i>Cerrar
+                                    Sesión</a>
+                        </li>
+                  </ul>
+                  <div class="social_media">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                  </div>
+            </div>
+            {% block body %}
+            {% endblock %}
+</body>
+
+</html>

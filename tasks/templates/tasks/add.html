@@ -1,0 +1,18 @@
+{% extends "tasks/layout.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block body %}
+<div class="form" style="padding-left: 40%;padding-top: 5%;">
+      <h1>Añadir Actividad</h1>
+      <div>
+            <form action="{% url 'tasks:add' %}" method="post">
+                  {% csrf_token %}
+                  {{ form|crispy }}
+                  <button class="btn-outline-success" type=" submit">Agregar</button>
+            </form>
+      </div>
+      <a href="{% url 'tasks:index' %}">Ver
+            tareas</a>
+</div>
+{% endblock %}
